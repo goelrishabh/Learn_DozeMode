@@ -1,0 +1,26 @@
+./adb shell dumpsys battery unplug,  ./adb shell dumpsys battery reset
+
+
+--- STANDBY
+
+./adb shell am set-inactive in.aerogram.eziosense.co2 [false|true]
+./adb shell am get-inactive in.aerogram.eziosense.co2
+
+
+
+
+--- DOZE
+
+./adb shell dumpsys deviceidle enable, ./adb shell dumpsys deviceidle disable
+./adb shell dumpsys deviceidle, ./adb shell dumpsys deviceidle enabled, ./adb shell dumpsys deviceidle get light
+
+./adb shell dumpsys deviceidle force-idle
+./adb shell dumpsys deviceidle force-idle light
+./adb shell dumpsys deviceidle force-idle deep
+
+./adb shell dumpsys deviceidle step light
+
+
+--- WAKEUP
+
+./adb shell input keyevent KEYCODE_WAKEUP
